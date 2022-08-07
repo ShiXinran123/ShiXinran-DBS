@@ -24,7 +24,7 @@ app=Flask(__name__)
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    if request.method=="GET":
+    if request.method=="POST":
         rates=float(request.form.get("rates"))
         print(rates)
         model1=joblib.load("regression")
